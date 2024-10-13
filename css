@@ -1,0 +1,75 @@
+/* styles.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: red; /* Red color for the header */
+    margin: 20px 0;
+}
+
+/* Form Styles */
+form {
+    max-width: 400px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    border: 2px solid black; /* Black border around the form */
+    border-radius: 8px; /* Rounded corners */
+    background-color: white; /* White background for the form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: black; /* Black label text */
+}
+
+input {
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Padding inside the input fields */
+    margin-bottom: 15px; /* Space between input fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners for input fields */
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+input:focus {
+    border-color: red; /* Change border color to red on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    background-color: red; /* Red button */
+    color: white; /* White text on the button */
+    padding: 10px 15px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button */
+}
+
+button:hover {
+    background-color: black; /* Change to black on hover */
+}
+
+/* Logo Styles */
+.logo {
+    display: block; /* Center the logo */
+    margin: 0 auto 20px auto; /* Center with bottom margin */
+    max-width: 150px; /* Limit the logo width */
+    height: auto; /* Keep the aspect ratio */
+}
